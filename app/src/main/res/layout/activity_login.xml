@@ -7,54 +7,65 @@
     android:background="#009688"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/hint_email">
+        style="@style/Widget.TSA.OutlinedTextLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:inputType="textEmailAddress" />
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"
+            android:layout_marginBottom="10dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/hint_password"
+        style="@style/Widget.TSA.OutlinedTextLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:inputType="textPassword" />
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="10dp"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_button"
             android:text="@string/shr_button_login"
             app:backgroundTint="#E91E63" />
 
     </RelativeLayout>
+
 
 </LinearLayout>
