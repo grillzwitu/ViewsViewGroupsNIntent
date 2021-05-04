@@ -21,6 +21,8 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
             android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:inputType="textEmailAddress"
@@ -41,11 +43,14 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
             android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:hint="@string/hint_password"
             android:inputType="textPassword"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_24" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,6 +68,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/round_button"
             android:text="@string/shr_button_login"
+            android:textAllCaps="false"
             app:backgroundTint="#E91E63" />
 
     </RelativeLayout>
