@@ -4,10 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009688"
-    android:gravity="center_vertical"
+    android:background="#CD009655"
+    android:gravity="fill_vertical"
     android:orientation="vertical"
     tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/welcome"
+            android:textSize="50sp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -15,6 +34,7 @@
         style="@style/Widget.TSA.OutlinedTextLayout"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -27,7 +47,8 @@
             android:layout_gravity="center"
             android:inputType="textEmailAddress"
             android:hint="@string/hint_email"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_baseline_person_24" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,8 +89,11 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/round_button"
             android:text="@string/shr_button_login"
+            android:textColor="@color/black"
             android:textAllCaps="false"
-            app:backgroundTint="#E91E63" />
+            app:backgroundTint="#E91E63"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 

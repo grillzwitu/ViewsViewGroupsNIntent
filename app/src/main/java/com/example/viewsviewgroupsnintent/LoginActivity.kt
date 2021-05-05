@@ -22,15 +22,27 @@ class LoginActivity : AppCompatActivity() {
         val signInButton = findViewById<MaterialButton>(R.id.loginButton)
 
         signInButton.setOnClickListener() {
-            if (email.text.toString().isNullOrEmpty() || password.text.toString().isNullOrEmpty()) {
-                Toast.makeText(this, "Email or password is not provided", Toast.LENGTH_LONG).show()
+            if (email.text.toString().isNullOrEmpty() && password.text.toString().isNullOrEmpty()) {
+                email.error = "Enter try@yahoo.com"
+                password.error = "Enter abcde"
+                Toast.makeText(this, "Email and password is not provided", Toast.LENGTH_LONG).show()
             }
             else {
                 if (email.text.toString() == "try@yahoo.com" && password.text.toString() == "abcde") {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
+                else if ((email.text.toString() != "try@yahoo.com" || email.text.toString() == "try@yahoo.com") && password.text.toString().isNullOrEmpty()){
+                    password.error = "Enter abcde"
+                    Toast.makeText(this, "Password is not provided", Toast.LENGTH_LONG).show()
+                }
+                else if ((password.text.toString() != "abcde" || password.text.toString() == "abcde") && email.text.toString().isNullOrEmpty()){
+                    email.error = "Enter try@yahoo.com"
+                    Toast.makeText(this, "Email is not provided", Toast.LENGTH_LONG).show()
+                }
                 else {
+                    email.error = "Enter try@yahoo.com"
+                    password.error = "Enter abcde"
                     Toast.makeText(this, "Wrong email or password provided", Toast.LENGTH_LONG).show()
                 }
             }
