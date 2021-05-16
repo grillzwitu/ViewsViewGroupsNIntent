@@ -24,7 +24,7 @@ class DetailActivity : AppCompatActivity() {
         actionBar!!.setDisplayShowHomeEnabled(true)
 
         logo = intent.getIntExtra(FactAdapter.LOGO_EXTRAS, 0)
-        name = intent.getStringExtra(FactAdapter.NAME_EXTRAS,)
+        name = intent.getStringExtra(FactAdapter.NAME_EXTRAS)
         detail = intent.getStringExtra(FactAdapter.FACT_EXTRAS)
 
         setUpFactDetail()
