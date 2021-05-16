@@ -2,6 +2,7 @@ package com.example.viewsviewgroupsnintent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import com.example.viewsviewgroupsnintent.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+
+        val actionBar : ActionBar? = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+        actionBar!!.setDisplayShowHomeEnabled(true)
 
         title = "Fun Facts: Did You Know?"
 

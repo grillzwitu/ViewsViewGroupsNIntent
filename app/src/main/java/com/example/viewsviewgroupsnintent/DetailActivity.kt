@@ -2,6 +2,7 @@ package com.example.viewsviewgroupsnintent
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import com.example.viewsviewgroupsnintent.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
@@ -17,6 +18,10 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
 
         setContentView(binding?.root)
+
+        val actionBar : ActionBar? = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+        actionBar!!.setDisplayShowHomeEnabled(true)
 
         logo = intent.getIntExtra(FactAdapter.LOGO_EXTRAS, 0)
         name = intent.getStringExtra(FactAdapter.NAME_EXTRAS,)
